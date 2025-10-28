@@ -1,250 +1,454 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Muhammad Hasnain Khan — AI/LLM Engineer</title>
-  <meta name="description" content="MSc in AI & Robotics and an active AI Engineer, fine-tuning LLMs for real-world applications. My master’s thesis proposes an interpretable, neuron-level fine-tuning framework for pre-trained models (under review in IEEE TKDE). I am now seeking a PhD opportunity to build upon my experience, with the explicit aim of contributing to interpretable generative AI, encompassing Information Retrieval, Reasoning, and Language Synthesis." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<style>
+  :root {
+    --primary: #0b355b;
+    --primary-light: #14537b;
+    --bg: #e7f0f7;
+    --section-bg: #ffffff;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --border: #d1e0ea;
+    --radius: 14px;
+    --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 6px 18px rgba(0, 0, 0, 0.08);
+  }
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  body {
+    font-family: "Inter", sans-serif;
+    background: var(--bg);
+    color: var(--text-primary);
+    line-height: 1.7;
+    margin: 0;
+  }
 
-  <style>
-    :root {
-      --bg: #f9fafb;
-      --panel: #ffffff;
-      --text: #111827;
-      --muted: #4b5563;
-      --accent: #2563eb;
-      --accent-hover: #1d4ed8;
-      --border: #e5e7eb;
-    }
+  .container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+  }
 
-    * { box-sizing: border-box; }
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    color: white;
+    padding: 20px 0 25px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    box-shadow: var(--shadow-md);
+    text-align: center;
+  }
 
-    html, body {
-      margin: 0;
-      padding: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
-      line-height: 1.7;
-      scroll-behavior: smooth;
-    }
+  .hero-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: left;
+  }
 
-    a { color: var(--accent); text-decoration: none; transition: color 0.2s ease; }
-    a:hover { color: var(--accent-hover); }
+  .hero img {
+    width: 145px;
+    height: 145px;
+    border-radius: 14px;
+    border: 3px solid rgba(255, 255, 255, 0.25);
+    object-fit: cover;
+    object-position: top center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  }
 
-    .wrap {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 24px;
-    }
+  .hero-text {
+    max-width: 550px;
+  }
 
-    header {
-      position: sticky;
-      top: 0;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--border);
-      z-index: 50;
-    }
+  .hero-text h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    font-weight: 800;
+  }
 
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
+  .hero-text .role {
+    font-size: 1.05rem;
+    color: #e0eaff;
+    font-weight: 600;
+    margin-top: 3px;
+  }
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
+  .hero-text .subtitle {
+    color: #f1f5f9;
+    font-size: 0.9rem;
+    margin-top: 2px;
+  }
 
-    .brand img {
-      width: 96px;
-      height: 96px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid var(--accent);
-      box-shadow: 0 4px 10px rgba(37, 99, 235, 0.15);
-      transition: transform 0.3s ease;
-    }
+  .hero-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
 
-    .brand img:hover { transform: scale(1.05); }
+  .hero-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 30px;
+    padding: 5px 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+  }
 
-    .brand h1 {
-      font-size: 24px;
-      font-weight: 700;
-      margin: 0;
-    }
+  .hero-link:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+  }
 
-    .brand p {
-      margin: 4px 0 0;
-      color: var(--muted);
-      font-size: 15px;
-      max-width: 600px;
-    }
+  /* SECTIONS */
+  section {
+    padding: 0;
+  }
 
-    .links {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
+  .section-inner {
+    background: var(--section-bg);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    margin-bottom: 10px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border);
+  }
 
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 10px 16px;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      background: var(--panel);
-      color: var(--text);
-      font-weight: 600;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.07);
-      transition: all 0.25s ease;
-    }
+  .section-title {
+    font-size: 1.3rem;
+    color: var(--primary);
+    font-weight: 700;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 10px;
+    padding-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
 
-    .btn:hover {
-      background: var(--accent);
-      color: #fff;
-      transform: translateY(-2px);
-      box-shadow: 0 3px 8px rgba(37, 99, 235, 0.3);
-    }
+  .card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 12px 14px;
+    margin-bottom: 8px;
+    box-shadow: var(--shadow-sm);
+  }
 
-    main {
-      padding: 32px 0 80px;
-    }
+  .pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+  }
 
-    section {
-      padding: 24px;
-      margin: 24px 0;
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-      transition: transform 0.3s ease;
-    }
+  .pill {
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    color: white;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+  }
 
-    section:hover {
-      transform: translateY(-2px);
-    }
+  ul {
+    margin-left: 18px;
+    color: var(--text-secondary);
+  }
 
-    section h2 {
-      margin: 0 0 10px;
-      font-size: 22px;
-      color: var(--accent);
-    }
+  .two-col {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 12px;
+  }
 
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
+  /* EDUCATION & PUBLICATIONS DETAILS */
+  .edu-details,
+  .pub-details {
+    margin-left: 10px;
+    margin-top: 6px;
+    padding: 8px 12px;
+    border-left: 3px solid var(--primary-light);
+    background: #f9fafb;
+    border-radius: 8px;
+    color: var(--text-secondary);
+    font-size: 0.94rem;
+  }
 
-    .one-col { display: grid; grid-template-columns: 1fr; gap: 16px; }
+  #publications .card p {
+    margin: 0 0 6px;
+    line-height: 1.6;
+  }
 
-    .pill {
-      display: inline-block;
-      padding: 6px 12px;
-      border-radius: 999px;
-      border: 1px solid var(--accent);
-      background: #f3f8ff;
-      color: var(--accent-hover);
-      font-size: 13px;
-      font-weight: 500;
-      margin: 4px 6px 0 0;
-      transition: all 0.25s ease;
-    }
+  #publications strong em {
+    font-style: italic;
+    font-weight: 600;
+  }
 
-    .pill:hover {
-      background: var(--accent);
-      color: #fff;
-      transform: scale(1.05);
-    }
+  #publications .muted {
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-top: 4px;
+  }
 
-    .list { margin: 8px 0; padding-left: 20px; }
+  .pub-note {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #64748b;
+  }
 
-    .muted { color: var(--muted); }
+  /* FOOTER */
+  footer {
+    background: var(--primary);
+    color: #e2e8f0;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9rem;
+    border-top: 3px solid var(--primary-light);
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+  }
 
-    .card {
-      padding: 16px;
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      background: var(--panel);
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
-      transition: all 0.25s ease;
-    }
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 4px;
+  }
 
-    .card:hover {
-      border-color: var(--accent);
-      box-shadow: 0 2px 8px rgba(37, 99, 235, 0.1);
-    }
+  .footer-link {
+    color: #e2e8f0;
+    font-size: 1.3rem;
+    text-decoration: none;
+    transition: 0.3s ease;
+  }
 
-    footer {
-      padding: 32px 0;
-      color: var(--muted);
-      border-top: 1px solid var(--border);
+  .footer-link:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+  }
+
+  .footer-location {
+    color: #cbd5e1;
+    font-size: 0.85rem;
+    margin-top: 3px;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .hero-content {
+      flex-direction: column;
       text-align: center;
-      font-size: 14px;
     }
 
-    .skills-category strong {
-      display: block;
-      font-weight: 600;
-      margin-bottom: 6px;
-      color: var(--accent-hover);
+    .hero-text {
+      text-align: center;
     }
 
-    @media (max-width: 900px) {
-      .grid { grid-template-columns: 1fr; }
-      .brand { justify-content: center; text-align: center; }
-      .brand img { width: 110px; height: 110px; }
-      .brand h1 { font-size: 22px; }
-      .brand p { font-size: 14px; }
-      .links { justify-content: center; }
-      section { padding: 20px; }
+    .two-col {
+      grid-template-columns: 1fr;
     }
+  }
+</style>
 
-  </style>
 </head>
 
 <body>
-  <header>
-    <div class="wrap nav">
-      <div class="brand">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
         <img src="khan.png" alt="Muhammad Hasnain Khan portrait" />
-        <div>
+        <div class="hero-text">
           <h1>Muhammad Hasnain Khan</h1>
-          <p>AI/LLM Engineer • PhD candidate (AI) — Interpretable NLP, Information Retrieval, LLMs Reasoning</p>
+          <div class="role">AI/LLM Engineer</div>
+          <div class="subtitle">PhD candidate (AI) — Interpretable NLP, Information Retrieval, LLMs Reasoning</div>
         </div>
       </div>
-      <div class="links">
-        <a class="btn" href="https://github.com/hksargani12" target="_blank">GitHub</a>
-        <a class="btn" href="mailto:hksargani12@outlook.com">Email</a>
-        <a class="btn" href="https://www.linkedin.com/in/hksargani12/" target="_blank">LinkedIn</a>
-        <a class="btn" href="https://wa.me/923057311012" target="_blank">WhatsApp</a>
+
+      <div class="hero-links">
+        <a href="https://github.com/hksargani12" target="_blank" class="hero-link"><i class="fab fa-github"></i> GitHub</a>
+        <a href="mailto:hksargani12@outlook.com" class="hero-link"><i class="fas fa-envelope"></i> Email</a>
+        <a href="https://www.linkedin.com/in/hksargani12/" target="_blank" class="hero-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://wa.me/923057311012" target="_blank" class="hero-link"><i class="fab fa-whatsapp"></i> WhatsApp</a>
       </div>
     </div>
-  </header>
+  </section>
 
-  <!-- keep all your existing main content (About, Publications, Experience, Education, etc.) here unchanged -->
+  <div class="container">
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="section-inner">
+        <h2 class="section-title"><i class="fas fa-user"></i> About</h2>
+        <p>MSc in AI & Robotics and an active AI Engineer, fine-tuning LLMs for real-world applications. My master’s thesis proposes an interpretable, neuron-level fine-tuning framework for pre-trained models (under review in IEEE TKDE). I am now seeking a PhD opportunity to build upon my experience, aiming to contribute to interpretable generative AI, encompassing Information Retrieval, Reasoning, and Language Synthesis.</p>
+        <!-- <div class="pills">
+          <span class="pill">Interpretable NLP</span>
+          <span class="pill">Information Retrieval</span>
+          <span class="pill">LLMs Reasoning</span>
+        </div> -->
+      </div>
+    </section>
 
-  <footer>
-    <div class="wrap">
-      <p>© <span id="y"></span> Muhammad Hasnain Khan • Hosted on GitHub Pages</p>
+<!-- PUBLICATIONS -->
+<section id="publications">
+  <div class="section-inner">
+    <h2 class="section-title"><i class="fas fa-book"></i> Publications</h2>
+
+    <!-- Publication 1 -->
+    <div class="card">
+      <p>
+        [1] Khan, M. H., Hosseini, S., Minaei-Bidgoli, B., & Li, X. (2025).
+        <strong><em>ASCENT: Interpretable Aspect-Based Sentiment Analysis via Contrastive Learning and Neuron-Level Optimization.</em></strong>
+        Submitted to <em>IEEE Transactions on Knowledge and Data Engineering (TKDE)</em>.
+      </p>
+      <p>
+        Proposed an interpretable, neuron-optimized framework for Aspect-Based Sentiment Analysis (ABSA), integrating multi-loss learning and selective neuron-level fine-tuning to enhance performance and interpretability.
+      </p>
+      <p class="muted"><em>Code will be released publicly upon publication.</em></p>
     </div>
+
+    <!-- Publication 2 -->
+    <div class="card">
+      <p>
+        [2] Cherkt, R., Khan, M. H., Sheikh, A. A., & Li, H. (2025).
+        <strong><em>Academic Integrity and Ethical Awareness in LLM Use: Multi-Group Analysis Across Cultures and Education Levels.</em></strong>
+        Submitted to <em>Journal of Educational Computing Research (JOECR)</em>.
+      </p>
+      <p>
+        Investigates how perceived ethical risks, transparency, cultural orientation, and awareness of academic integrity shape the ethical awareness of LLM use among students across various educational levels and cultures. Results highlight the strong role of cultural orientation and integrity in fostering responsible AI engagement.
+      </p>
+    </div>
+  </div>
+</section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="section-inner">
+        <h2 class="section-title"><i class="fas fa-briefcase"></i> Experience</h2>
+        <div class="card">
+          <strong>AI/LLM Engineer</strong>
+          <p><em>Architecture In Motion Inc. — Lahore, Pakistan · Aug 2025 – Present</em></p>
+          <ul>
+            <li>Fine-tuning LLMs for enterprise NLP applications, including summarization, conversational AI, and information retrieval.</li>
+            <li>Adapting and evaluating LLMs through prompt engineering to enhance reasoning, consistency, and interpretability.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <strong>Graduate Teaching Assistant</strong>
+          <p><em>Iran University of Science and Technology — Tehran, Iran · Feb 2025 – Jun 2025</em></p>
+          <ul>
+            <li>Developed lecture materials, assignments, and projects for Advanced Data Mining.</li>
+            <li>Reviewed and graded student work; provided one-on-one academic support.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <strong>Computer Science Lecturer</strong>
+          <p><em>Punjab Group of Colleges — Layyah, Pakistan · Apr 2019 – Jan 2022</em></p>
+          <ul>
+            <li>Taught programming, data structures, databases, and networking (Grades 9–12).</li>
+            <li>Supervised labs and projects; prepared students for exams.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="section-inner">
+    <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
+
+    <div class="card">
+      <strong>MSc. Computer Engineering (Artificial Intelligence and Robotics)</strong>
+      <p><em>Iran University of Science and Technology (IUST), Tehran — 2022–2025</em></p>
+      <div class="edu-details">
+        <p><strong>Courses:</strong> Advanced Data Mining, Natural Language Processing, Machine Learning, Pattern Recognition</p>
+        <p><strong>Thesis:</strong> <em>Decoding Sentiments: Interpreting Feed-Forward Network Neurons for Polarity Detection</em></p>
+        <p><strong>Thesis Grade:</strong> Excellent (19–20/20)</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <strong>BS Computer Science</strong>
+      <p><em>Government College University Faisalabad (GCUF) — 2014–2018</em></p>
+      <div class="edu-details">
+        <p><strong>Final Year Project:</strong> Automatic Text Summarization and Keyword Extraction Web Application</p>
+        <p>Developed a web-based NLP system using TF-IDF weighting, cosine similarity, and K-means clustering. Designed an interactive web interface for summary generation and keyword visualization.</p>
+        <p><strong>Tools:</strong> Python, NLTK, scikit-learn, Flask, HTML, CSS, JavaScript</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- HONORS & AWARDS -->
+    <section id="honors">
+      <div class="section-inner">
+        <h2 class="section-title"><i class="fas fa-award"></i> Honors & Awards</h2>
+        <div class="card">Postgraduate Scholarship — Ministry of Science, Research and Technology, Iran (2022)</div>
+        <div class="card">Punjab Educational Endowment Fund (PEEF) Scholarship — Government of Punjab, Pakistan (2015)</div>
+      </div>
+    </section>
+
+    <!-- SKILLS & LANGUAGES -->
+    <section id="skills">
+      <div class="section-inner">
+        <h2 class="section-title"><i class="fas fa-gears"></i> Skills</h2>
+        <div class="two-col">
+          <div>
+            <strong>Technical:</strong>
+            <div class="pills">
+              <span class="pill">Python</span><span class="pill">SQL</span><span class="pill">NumPy</span><span class="pill">Pandas</span><span class="pill">Matplotlib</span><span class="pill">Seaborn</span><span class="pill">spaCy</span><span class="pill">LangChain</span><span class="pill">TensorFlow</span><span class="pill">PyTorch</span><span class="pill">Scikit-Learn</span><span class="pill">Docker</span><span class="pill">Git</span><span class="pill">Azure</span><span class="pill">Linux</span>
+            </div>
+          </div>
+          <div>
+            <strong>Research & Analytical:</strong>
+            <div class="pills">
+              <span class="pill">Literature Review</span><span class="pill">Academic Writing</span><span class="pill">Model Evaluation</span><span class="pill">Statistical Analysis</span><span class="pill">Experimental Design</span><span class="pill">Reproducibility</span>
+            </div>
+          </div>
+        </div>
+        <br />
+        <h2 class="section-title"><i class="fas fa-language"></i> Languages</h2>
+        <div class="pills">
+          <span class="pill">Urdu</span>
+          <span class="pill">English</span>
+          <span class="pill">Persian</span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-links">
+      <a href="https://github.com/hksargani12" class="footer-link" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="mailto:hksargani12@outlook.com" class="footer-link"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/hksargani12/" class="footer-link" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://wa.me/923057311012" class="footer-link" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <p>&copy; <span id="year"></span> Muhammad Hasnain Khan. All rights reserved.</p>
+    <!-- <div class="footer-location">Based in Layyah, Pakistan · Hosted on GitHub Pages</div> -->
   </footer>
 
   <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
