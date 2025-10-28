@@ -4,209 +4,242 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Muhammad Hasnain Khan — AI/LLM Engineer</title>
-  <meta name="description" content="PhD candidate and AI/LLM Engineer focused on NLP, Large Language Models, and Explainable AI (XAI)." />
+  <meta name="description" content="MSc in AI & Robotics and an active AI Engineer, fine-tuning LLMs for real-world applications. My master’s thesis proposes an interpretable, neuron-level fine-tuning framework for pre-trained models (under review in IEEE TKDE). I am now seeking a PhD opportunity to build upon my experience, with the explicit aim of contributing to interpretable generative AI, encompassing Information Retrieval, Reasoning, and Language Synthesis." />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
-    :root{
-      --bg:#f9fafb;
-      --panel:#ffffff;
-      --text:#111827;
-      --muted:#4b5563;
-      --accent:#2563eb;
-      --accent-hover:#1d4ed8;
-      --border:#e5e7eb;
+    :root {
+      --bg: #f9fafb;
+      --panel: #ffffff;
+      --text: #111827;
+      --muted: #4b5563;
+      --accent: #2563eb;
+      --accent-hover: #1d4ed8;
+      --border: #e5e7eb;
     }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;line-height:1.6}
-    a{color:var(--accent);text-decoration:none}
-    a:hover{color:var(--accent-hover)}
-    .wrap{max-width:1100px;margin:0 auto;padding:24px}
-    header{position:sticky;top:0;background:rgba(255,255,255,0.95);backdrop-filter:saturate(150%) blur(6px);z-index:50;border-bottom:1px solid var(--border)}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .brand{display:flex;align-items:center;gap:14px}
-    .brand img{width:56px;height:56px;border-radius:50%;object-fit:cover;border:1px solid var(--border)}
-    .brand h1{font-size:20px;font-weight:700;margin:0}
-    .brand p{margin:0;color:var(--muted);font-size:14px}
-    .links{display:flex;gap:14px;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border:1px solid var(--border);border-radius:12px;background:var(--panel);color:var(--text);font-weight:600;box-shadow:0 1px 2px rgba(0,0,0,0.05)}
 
-    main{padding:20px 0 60px}
-    section{padding:24px;margin:24px 0;background:var(--panel);border:1px solid var(--border);border-radius:16px;box-shadow:0 1px 3px rgba(0,0,0,0.08)}
-    section h2{margin:0 0 10px;font-size:22px}
-    .grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-    .one-col{display:grid;grid-template-columns:1fr;gap:16px}
-    .pill{display:inline-block;padding:6px 10px;border-radius:999px;border:1px solid var(--border);background:#f3f4f6;color:var(--muted);font-size:12px;margin:4px 6px 0 0}
-    .list{margin:0;padding-left:18px}
-    .muted{color:var(--muted)}
-    .card{padding:16px;border:1px solid var(--border);border-radius:14px;background:var(--panel);box-shadow:0 1px 2px rgba(0,0,0,0.05)}
+    * { box-sizing: border-box; }
 
-    footer{padding:32px 0;color:var(--muted);border-top:1px solid var(--border)}
-    .footgrid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-
-    @media (max-width: 900px){
-      .grid{grid-template-columns:1fr}
-      .footgrid{grid-template-columns:1fr}
-      .brand h1{font-size:18px}
-      .brand img{width:48px;height:48px}
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+      line-height: 1.7;
+      scroll-behavior: smooth;
     }
+
+    a { color: var(--accent); text-decoration: none; transition: color 0.2s ease; }
+    a:hover { color: var(--accent-hover); }
+
+    .wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      z-index: 50;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .brand img {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--accent);
+      box-shadow: 0 4px 10px rgba(37, 99, 235, 0.15);
+      transition: transform 0.3s ease;
+    }
+
+    .brand img:hover { transform: scale(1.05); }
+
+    .brand h1 {
+      font-size: 24px;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .brand p {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+      max-width: 600px;
+    }
+
+    .links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--panel);
+      color: var(--text);
+      font-weight: 600;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.07);
+      transition: all 0.25s ease;
+    }
+
+    .btn:hover {
+      background: var(--accent);
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 3px 8px rgba(37, 99, 235, 0.3);
+    }
+
+    main {
+      padding: 32px 0 80px;
+    }
+
+    section {
+      padding: 24px;
+      margin: 24px 0;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+
+    section:hover {
+      transform: translateY(-2px);
+    }
+
+    section h2 {
+      margin: 0 0 10px;
+      font-size: 22px;
+      color: var(--accent);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .one-col { display: grid; grid-template-columns: 1fr; gap: 16px; }
+
+    .pill {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--accent);
+      background: #f3f8ff;
+      color: var(--accent-hover);
+      font-size: 13px;
+      font-weight: 500;
+      margin: 4px 6px 0 0;
+      transition: all 0.25s ease;
+    }
+
+    .pill:hover {
+      background: var(--accent);
+      color: #fff;
+      transform: scale(1.05);
+    }
+
+    .list { margin: 8px 0; padding-left: 20px; }
+
+    .muted { color: var(--muted); }
+
+    .card {
+      padding: 16px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--panel);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+      transition: all 0.25s ease;
+    }
+
+    .card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 2px 8px rgba(37, 99, 235, 0.1);
+    }
+
+    footer {
+      padding: 32px 0;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .skills-category strong {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--accent-hover);
+    }
+
+    @media (max-width: 900px) {
+      .grid { grid-template-columns: 1fr; }
+      .brand { justify-content: center; text-align: center; }
+      .brand img { width: 110px; height: 110px; }
+      .brand h1 { font-size: 22px; }
+      .brand p { font-size: 14px; }
+      .links { justify-content: center; }
+      section { padding: 20px; }
+    }
+
   </style>
 </head>
+
 <body>
   <header>
     <div class="wrap nav">
       <div class="brand">
         <img src="khan.png" alt="Muhammad Hasnain Khan portrait" />
         <div>
-          <h1 class="tight">Muhammad Hasnain Khan</h1>
-          <p>AI/LLM Engineer • PhD candidate (AI) — NLP, LLMs, Explainable AI</p>
+          <h1>Muhammad Hasnain Khan</h1>
+          <p>AI/LLM Engineer • PhD candidate (AI) — Interpretable NLP, Information Retrieval, LLMs Reasoning</p>
         </div>
       </div>
       <div class="links">
         <a class="btn" href="https://github.com/hksargani12" target="_blank">GitHub</a>
-        <a class="btn" href="mailto:hksargani12@outlook.com">Email 1</a>
-        <a class="btn" href="mailto:hksargani12@gmail.com">Email 2</a>
+        <a class="btn" href="mailto:hksargani12@outlook.com">Email</a>
         <a class="btn" href="https://www.linkedin.com/in/hksargani12/" target="_blank">LinkedIn</a>
         <a class="btn" href="https://wa.me/923057311012" target="_blank">WhatsApp</a>
       </div>
     </div>
   </header>
 
-  <main class="wrap">
-    <section>
-      <h2>About</h2>
-      <p class="muted">PhD candidate in Artificial Intelligence with a strong focus on Natural Language Processing, Large Language Models, and Explainable AI (XAI). Passionate about bridging research and real‑world impact through interpretable and efficient AI systems.</p>
-      <div>
-        <span class="pill">NLP</span>
-        <span class="pill">Large Language Models</span>
-        <span class="pill">Explainable AI</span>
-      </div>
-    </section>
-
-    <section>
-      <h2>Publications</h2>
-      <div class="card">
-        <strong>ASCENT: Interpretable Aspect-Based Sentiment Analysis via Contrastive Learning and Neuron-Level Optimization</strong>
-        <div class="muted">Khan, M. H., Hosseini, S., Minaei‑Bidgoli, B., & Li, X. (2025). Submitted to IEEE Transactions on Knowledge and Data Engineering.</div>
-        <p class="muted tight">Proposed an interpretable, neuron-optimized framework for Aspect-Based Sentiment Analysis (ABSA) integrating multi-loss learning and selective neuron-level fine-tuning, achieving superior performance and transparency over state-of-the-art models..</p>
-      </div>
-    </section>
-
-    <section>
-      <div class="grid">
-        <div>
-          <h2>Experience</h2>
-          <div class="card">
-            <strong>AI/LLM Engineer</strong>
-            <div class="muted">Architecture In Motion Inc. — Lahore, Pakistan · Aug 2025 – Present</div>
-            <ul class="list">
-              <li>Prototyped NLP and LLM‑driven applications and integrated them into scalable systems on Azure.</li>
-              <li>Built Python‑based proofs‑of‑concept with clean code and Git practices.</li>
-              <li>Designed end‑to‑end AI apps using NLP/LLM techniques in agile sprints.</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <strong>Graduate Teaching Assistant</strong>
-            <div class="muted">Iran University of Science and Technology — Tehran, Iran · Feb 2025 – Jun 2025</div>
-            <ul class="list">
-              <li>Developed lecture materials, assignments, and hands‑on projects for Advanced Data Mining.</li>
-              <li>Reviewed and graded student work; provided one‑on‑one support.</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <strong>Computer Science Lecturer</strong>
-            <div class="muted">Punjab Group of Colleges (Layyah Campus) — Layyah, Pakistan · Apr 2019 – Jan 2022</div>
-            <ul class="list">
-              <li>Taught programming, data structures, databases, and networking (Grades 9–12).</li>
-              <li>Supervised labs and projects; prepared students for exams.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div>
-          <h2>Education</h2>
-          <div class="card">
-            <strong>MSc. Computer Engineering</strong>
-            <div class="muted">Iran University of Science and Technology (IUST), Tehran — 2022–2025</div>
-            <div class="muted">Field: Artificial Intelligence & Robotics · Thesis: Decoding Sentiments: Interpreting Feed‑Forward Network Neurons for Polarity Detection</div>
-          </div>
-          <div class="card">
-            <strong>BS Computer Science</strong>
-            <div class="muted">Government College University Faisalabad (GCUF) — 2014–2018</div>
-            <div class="muted">Final Grade: 3.38 / 4.00</div>
-          </div>
-
-          <h2>Honors & Awards</h2>
-          <div class="card">
-            Postgraduate Scholarship — Ministry of Science, Research and Technology, Iran (2022)
-          </div>
-          <div class="card">
-            Punjab Educational Endowment Fund (PEEF) Scholarship — Government of Punjab, Pakistan (2015)
-          </div>
-
-          <h2>Languages</h2>
-          <div class="card">
-            <span class="pill">Urdu</span>
-            <span class="pill">English</span>
-            <span class="pill">Persian</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Skills</h2>
-      <div class="one-col">
-        <div>
-          <span class="pill">Python</span>
-          <span class="pill">PyTorch</span>
-          <span class="pill">TensorFlow</span>
-          <span class="pill">Scikit‑Learn</span>
-          <span class="pill">NumPy</span>
-          <span class="pill">Matplotlib</span>
-          <span class="pill">HuggingFace Transformers</span>
-          <span class="pill">LangChain</span>
-          <span class="pill">Azure</span>
-          <span class="pill">Docker</span>
-          <span class="pill">Git</span>
-          <span class="pill">NLP (NLTK, spaCy)</span>
-          <span class="pill">Academic Research & Writing</span>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Contact</h2>
-      <div class="grid">
-          <div class="card">
-          <div><strong>GitHub</strong></div>
-          <div><a href="https://github.com/hksargani12" target="_blank" rel="noopener">github.com/hksargani12/</a></div>
-        </div>
-        <div class="card">
-          <div><strong>Emails</strong></div>
-          <div><a href="mailto:hksargani12@outlook.com">hksargani12@outlook.com</a></div>
-          <div><a href="mailto:hksargani12@gmail.com">hksargani12@gmail.com</a></div>
-        </div>
-        <div class="card">
-          <div><strong>LinkedIn</strong></div>
-          <div><a href="https://www.linkedin.com/in/hksargani12/" target="_blank" rel="noopener">linkedin.com/in/hksargani12</a></div>
-        </div>
-        <div class="card">
-          <div><strong>Mobile / WhatsApp</strong></div>
-          <div><a href="https://wa.me/923057311012" target="_blank" rel="noopener">+92 305 731 1012</a></div>
-        </div>
-      </div>
-      <p class="muted">Based in Layyah, Pakistan.</p>
-    </section>
-  </main>
+  <!-- keep all your existing main content (About, Publications, Experience, Education, etc.) here unchanged -->
 
   <footer>
-    <div class="wrap footgrid">
-      <div class="muted">© <span id="y"></span> Muhammad Hasnain Khan</div>
-      <div class="muted" style="text-align:right">Hosted on GitHub Pages</div>
+    <div class="wrap">
+      <p>© <span id="y"></span> Muhammad Hasnain Khan • Hosted on GitHub Pages</p>
     </div>
   </footer>
 
